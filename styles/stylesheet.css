@@ -88,6 +88,10 @@ h3 {
 .navtop {
   background-color: var(--primary-color);
 }
+.topbar .container {
+  white-space: nowrap;
+  overflow-x: auto;
+}
 
 /* ---------------- DECORATED UNDERLINE ---------------- */
 .decorada {
@@ -458,6 +462,9 @@ h3 {
   .project-card3 {
     height: auto;
   }
+  .circuloh2{
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -471,4 +478,63 @@ h3 {
   .project-card h5 {
     font-size: 0.9rem;
   }
+}
+/* ---- CONTACTO PAGE IMPROVEMENTS ---- */
+
+/* Hero overlay */
+.imagen_inicio {
+  position: relative;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.imagen_inicio::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.imagen_inicio h2 {
+  position: relative;
+  color: #fff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+}
+
+/* Form styling */
+#formContacto .form-control {
+  border-radius: 0.5rem;
+  border: 1px solid #ddd;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.05);
+  transition: border-color 0.3s;
+}
+#formContacto .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 0.2rem rgba(32,146,200,0.25);
+}
+
+/* Contact info section */
+.col-md-6 p i {
+  color: var(--primary-color);
+  margin-right: 8px;
+}
+.col-md-6 h3 {
+  font-weight: 700;
+}
+
+/* Map */
+iframe.reveal {
+  min-height: 350px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Footer improvements */
+footer {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 2rem;
+}
+footer a:hover {
+  color: var(--accent-color) !important;
 }
